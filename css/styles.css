@@ -1,0 +1,185 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+body {
+    background-color: #4b0082;
+}
+
+html{
+    overflow: hidden;
+}
+
+section {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    'h b'
+    's m'
+    'f f';
+    height: 95vh;
+    width: 95vw;
+    gap: 5px;
+}
+
+h1 {
+    color: #00ff00;
+}
+
+button,input {
+    border: none;
+    outline: none;
+    background-color: #ffff00;
+    color: #000000;
+}
+
+footer{
+    grid-area: f;
+    display: flexbox;
+    flex-direction: row;
+    text-align: center;
+    color: #00ff00;
+}
+
+#create {
+    display: block;
+}
+
+#amount, #create{
+    height: 27px;
+    width: 20%;
+    margin: 3px;
+}
+
+#adding {
+    grid-area: s;
+
+}
+
+#add_item,#expense_item,#expense_amount {
+    grid-area: s;
+    width: 26%;
+    height: 12%;
+    margin: 3px;
+    text-align: start;
+    display: block;
+}
+
+#display_money {
+    color: #7fff00;
+}
+
+#expenses{
+    color: #ffff00;
+}
+
+#current,#num{
+    display: inline-block;
+    color: #00ced1;
+}
+
+#budget{
+    grid-area: b;
+}
+
+#expenses{
+    grid-area: b;
+    margin-top: 15%;
+}
+
+@media screen and (max-width: 800px){
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        'h b'
+        's m'
+        'f f';
+    }
+
+    #create,#amount{
+        grid-area: h;
+        height: 35px;
+        width: 60%;
+    }
+
+    #expense_item,#expense_amount{
+        height: 10%;
+        width: 70%;
+    }
+
+    #add_item{
+        grid-area: s;
+        height: 15%;
+        width: 55%;
+    }
+
+    footer{
+        grid-area: f;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #budget{
+        grid-area: s;
+    }
+
+    #expenses{
+        grid-area: m;
+    }
+
+    #adding{
+        grid-area: b;
+        margin-top: 15%;
+    }
+} 
+
+@media screen and (max-width: 450px){
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        'h b '
+        's m '
+        'f f ';
+    }
+
+    #create,#amount{
+        grid-area: h;
+        height: 35px;
+        width: 85%;
+    }
+
+    #expense_item,#expense_amount{
+        height: 15%;
+        width: 90%;
+    }
+
+    #add_item{
+        height: 25%;
+        width: 55%;
+    }
+
+    #adding{
+        grid-area: b;
+        margin-top: 35%;
+    }
+
+    footer{
+        grid-area: f;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #budget{
+        grid-area: s;
+    }
+
+    #expenses{
+        grid-area: m;
+    }
+} 

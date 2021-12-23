@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script defer src="js/app.js"></script>
+    <title>Budget App</title>
+</head>
+<body>
+    <section>
+        <header>
+            <div id="header">
+            <h1>Budget App</h1>
+            <div id="create_budget">
+            <input id="amount" placeholder="budget amount" type="text">
+            <button id="create" onclick="create_budget()">Create Budget</button>
+            </div>
+        </div>
+        </header>
+        <div id="adding">
+        <input id="expense_item" placeholder="expense item" type="text">
+        <input id="expense_amount" placeholder="expense amount" type="text">
+        <button id="add_item" onclick="subtract_budget()">Add Expense Item</button>
+    </div>
+    <div id="budget">
+        <p id="display_money" style="visibility: hidden;">My Budget: </p>
+        <p id="current" style="visibility: hidden;" >current remaining budget: <p id="num" onclick="subtract_budget()"> </p></p>
+    </div>
+        <p id="expenses" style="visibility: hidden;"></p>
+    </section>
+    <footer>
+        <p>Created By Christopher Chan</p>
+    </footer>
+
+</body>
+</html>
